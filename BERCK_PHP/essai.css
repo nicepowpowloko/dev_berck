@@ -1,0 +1,14 @@
+.image{
+    height: 500px;
+    width: 500px;
+    border: 2px dashed rosybrown;
+    background-image: url("./m3njcR.jpg");
+    background-repeat: no-repeat;
+}
+
+
+body{
+    background-image: url("./m3njcR.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

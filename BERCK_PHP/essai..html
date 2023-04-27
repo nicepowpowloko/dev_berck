@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		img {
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+            border-radius: 40%;
+		}
+
+        body {
+  background-color: white;
+}
+
+
+	</style>
+</head>
+<body>
+	<img src="./m3njcR.jpg" id="image">
+
+    <button onclick="boutonClick()">Cliquez ici</button>
+
+    <p id="monParagraphe">Cliquez sur le bouton ci-dessous pour changer la couleur de ce paragraphe.</p>
+	<button onclick="changerCouleur()">Changer la couleur</button>
+
+    <button onclick="changerCouleurs()">Changer la couleur</button>
+    
+	<script>
+		var angle = 0;
+		var image = document.getElementById('image');
+		setInterval(function() {
+			angle += 1;
+			image.style.transform = 'rotate(' + angle + 'deg)';
+		}, 10);
+
+
+        function boutonClick() {
+        alert("yo yo yo!");
+      }
+
+      function changerCouleur() {
+			document.getElementById("monParagraphe").style.color = "red","yellow";
+		}
+
+        function changerCouleurs() {
+			document.body.style.backgroundColor = "red";
+		}
+
+
+        var colors = ["red", "green", "blue", "yellow", "orange"];
+var currentIndex = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[currentIndex];
+  currentIndex++;
+  if (currentIndex == colors.length) {
+    currentIndex = 0;
+  }
+}, 1000);
+
+
+
+	</script>
+</body>
+</html>
