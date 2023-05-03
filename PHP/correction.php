@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +41,10 @@
         justify-content: center;
         background-color: burlywood;
     }
-</style>
 
+
+    
+</style>
 
 <body>
     
@@ -281,6 +289,20 @@ if ($age >= 18 && $age <= 30) {
 } else {
     echo "<h2>La personne est mineur</h2>";
 }
+?>
+
+<?php
+// Définition de la variable compteur
+$compteur = 0;
+
+// Boucle do while
+do {
+    // Affichage du compteur
+    echo "Compteur : " . $compteur . "<br>";
+
+    // Incrémentation du compteur
+    $compteur++;
+} while ($compteur < 10);
 ?>
 
 
