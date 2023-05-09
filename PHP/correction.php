@@ -187,7 +187,7 @@ $admin1->afficher_infos();
 $couleurs = array("rouge", "vert", "gris", "violet", "orange");
 
 foreach ($couleurs as $couleur) {
-  echo "<h2>" . $couleur . "</h2<br>";
+  echo "<h2>la couleurs est  " . $couleur . "</h2<br>";
 }
 ?>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pc1.css">
+    <title>pc1</title>
+</head>
+<body>
+    
+
+
+    <div id='content'>
+        <img id="test" />
+        
+    </div>
+
+<script>
+
+
+    var kiwi = [
+    "../img/american story.webp"
+    
+];
+var poy = document.getElementById("test");
+var currentIndex = 0;
+var testTimer;
+
+(function nextImg(){        
+    testTimer = Date.now();
+    poy.src=kiwi[currentIndex];
+    poy.onload=function(){
+        currentIndex = (currentIndex + 1) % kiwi.length;
+        var remainingTime = 1800- (Date.now() - testTimer);
+        if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+        else { nextImg(); }
+    };        
+})();
+
+
+</script>
+
+
+
+</body>
+</html>
