@@ -83,7 +83,7 @@
 <h2>Le JavaScript ouverture du script via une fonction</h2>
 
 <script>
-    function myFunction() {
+    function myFunction1() {
       document.getElementById("demo4").innerHTML = "le script peut s'ouvrir n'importe où dans notre fichier";
     }
     // Je déclare ma fonction à l'intérieur de ma tabulation d'ouverture du script
@@ -92,7 +92,7 @@
 
     <p id="demo4">La balise script</p>
     
-    <button type="button" onclick="myFunction()">Click</button>
+    <button type="button" onclick="myFunction1()">Click</button>
     
 <hr>
 
@@ -104,7 +104,7 @@
 
 <hr>
 
-<!-- Affichage avec l'utilisation du .innerHTML -->
+<!-- Affichage avec l'utilisation le .innerHTML -->
 
 <h2>Affichage en .innerHTML</h2>
 
@@ -112,19 +112,210 @@
 
 <script>
 document.getElementById("demo5").innerHTML = 10 + 20;
+
+    // Je déclare mon document get en innerHTML en lui aplliquant un opérateur pour effectuer une addition 
+
+</script>
+
+<hr>
+
+<!-- Affichage avec l'utilisation du document.write() -->
+
+<h2>Affichage en document.write()</h2>
+
+<script>
+    document.write(6 - 5);
+
+    //  Ici le document.write va nous servir à effectuer un test, j'utilise un opérateur pour effectuer un test ou un résultat
+    
+    </script>
+
+<hr>
+
+<!-- Affichage avec l'utilisation du document.write() -->
+
+<h2>document.write() aprés le chargement d'un document HTML </h2>
+<p>vive la D.V.E</p>
+
+<button type="button" onclick="document.write(15 + 20)">click</button>
+
+<hr>
+
+<!-- Affichage avec l'utilisation du window.alert -->
+
+<h2>utilisation du window.alert avec button où chargement de page</h2>
+
+<button type="button" onclick="window.alert('RAZER')">click</button>
+
+<!-- Utilisation du window.alert via un type button -->
+
+<script>
+ window.alert("goooooooo");
+    </script>
+
+<!-- Utilisation du window.alert aux chargement de la page -->
+
+<hr>
+
+<!-- Utilisation du window.print -->
+
+<h2>Utilisation de  window.print()</h2>
+
+<p>click sur le boutton pour passer à l'impréssion.</p>
+
+<button onclick="window.print()">Click</button>
+
+<!--  grâce a l'Utilisation du window.print() ceci nous permet de sortir directement en impression notre page -->
+
+<hr>
+
+<!-- Instruction JAVASCRIPT -->
+
+<h2>Instruction  variable bloc JavaScript</h2>
+
+<p id="demo6"></p>
+
+<script>
+let x, y, z;  
+x = 5;        
+y = 6;        
+z = x + y;    
+
+// Avec let je déclare une variable de bloc
+
+document.getElementById("demo6").innerHTML =
+"la valeur de z est  " + z + ".";  
+</script>
+
+<hr>
+
+<h2>Instruction JAVASCRIPT</h2>
+
+<p>Il faut bien se désinfecter les mains avec du</p>
+
+<p id="demo7"></p>
+
+<script>
+document.getElementById("demo7").innerHTML = "gel hydroalcoolique";
+
+// j'appelle mon "id demo7" pour pouvoir l'afficher dans ma balise "p"
+
+</script>
+
+<hr>
+
+<!-- fonction JAVASCRIPT en bloc -->
+
+<h2>Bloc de code dans une fonction JAVASCRIPT</h2>
+
+<p>click pour faire apparaitre un bloc de code</p>
+
+<button type="button" onclick="myFunction()">Click</button>
+
+<p id="demo8"></p>
+<p id="demo9"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo8").innerHTML = "Salut";
+  document.getElementById("demo9").innerHTML = "Comment vas tu ?";
+}
+
+// j'utilise donc un script qui est dans une même fonction pour pouvoir déclarer deux "id" différent tout en étant dans cette même fonction
+
+</script>
+
+<hr>
+
+<!-- variable en JAVASCRIPT  -->
+
+<h2>Variable JAVASCRIPT</h2>
+
+<p>Je défini une variable let x avec comme valeur 16 </p>
+
+
+<p id="demo10"></p>
+
+<script>
+let: x ;
+x = 16;
+// je déclare "let=x" et "x=6"
+
+document.getElementById("demo10").innerHTML = x;
+
+// Avec "x" j"affiche donc sa valeur dans la balise "p" qui est mon "id demo10" 
+
+</script>
+
+<hr>
+
+<!-- Opérateurs en JAVASCRIPT  -->
+
+<h2>Opérateur en JAVASCRIPT</h2>
+
+<p>JavaScript utilise des opérateurs arithmétiques.</p>
+
+<p id="demo11"></p>
+
+<script>
+document.getElementById("demo11").innerHTML = (20 + 8) * 10;
+
+// ici j'utilise donc des opérateurs arithmétiques pour éffectuer une opération.
+
+</script>
+
+<hr>
+
+<h2>JavaScript Expressions</h2>
+
+<p>L'expression calcul une valeur</p>
+
+<p id="demo12"></p>
+
+<script>
+let: y;
+y = 5;
+document.getElementById("demo12").innerHTML = y * 10;
+
+// ici j'utilise donc une expression pour effectuer un calcul de la valeur y
+
+</script>
+
+<hr>
+
+<!-- Variables en JAVASCRIPT  -->
+
+
+<h2>JavaScript Variables</h2>
+
+<p>Dans cet exemple on déclare w, a, c</p>
+
+<p id="demo13"></p>
+
+<script>
+var w = 5; // une valeur avec une variable
+var a = 20; // une deuxiéme valeur avec une variable
+var c = w + a; // une troisieme valeur avec operateur d'adition en déclarant mes deux variables
+document.getElementById("demo13").innerHTML ="la valeurs de c est : " + c;
+
 </script>
 
 <hr>
 
 
+<h1>JavaScript Variables</h1>
 
+<p>exemple avec const et let</p>
 
+<p id="demo14"></p>
 
-
-
-
-
-
+<script>
+const prix1 = 5;
+const prix2 = 6;
+let total = prix1 + prix2;
+document.getElementById("demo14").innerHTML =
+"la somme est égal à : " + total;
+</script>
 
 
 </body>
