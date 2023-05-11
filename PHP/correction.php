@@ -23,6 +23,7 @@
         font-weight:bolder;
         color: darkviolet;
         font-size: 1.5em;
+        
     }
 
     h1{

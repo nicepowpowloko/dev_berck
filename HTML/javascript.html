@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours-JS</title>
+</head>
+<body>
+
+<!-- Présentation changement élément HTML -->
+
+    <h2>Que peut faire JavaScript ?</h2>
+
+    <p id="demo">Le JavaScript change le HTML.</p>
+
+     <!-- Je défini mon "p id="demo"" -->
+    
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Bonjours as tous"'>Click</button>
+
+     <!-- Je travaille directement sur mon "id" avec le getElementById pour pouvoir modifier le texte "innerHTML = balisage HTML" -->
+
+<hr>
+
+    <!-- Présentation changement élément de style du HTML -->
+    
+    <h2>Que peut faire JavaScript ?</h2>
+
+    <p id="demo1">Le JavaScript peut changer le style d'un élément HTML.</p>
+
+     <!-- Je défini mon "p id="demo"" -->
+
+    <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">Click</button>
+
+ <!-- Je travaille directement sur mon "id" avec le getElementById pour pouvoir modifier son style -->
+
+<hr>
+
+ <!-- Présentation changement élément source img -->
+
+    <h2>Que peut faire JavaScript ?</h2>
+
+    <p>Le JavaScript peut changer directement une source attribut</p>
+    
+    <img id="myImage" src="../IMAGE/code.jpg" style="width:100px">
+
+    <button onclick="document.getElementById('myImage').src='../IMAGE/cssc.jpg'" >précédent</button>
+
+     <!-- Je travaille directement sur mon "id" et je lui applique une nouvelle src aux click de mon bouton -->
+      
+    <button onclick="document.getElementById('myImage').src='../IMAGE/croatie-lacs-plitvice-cascades-7.jpg'">suivant</button>
+
+
+<hr>
+
+<!-- Présentation pour masquer des éléments HTML -->
+
+    <h2>Que peut faire JavaScript ?</h2>
+
+<p id="demo2">Le JavaScript peut masquer des éléments HTML.</p>
+
+<button type="button" onclick="document.getElementById('demo2').style.display='none'">Click</button>
+
+ <!-- Je travaille directement sur mon "id" avec le getElementById pour pouvoir modifier son style en "none" (masquer) -->
+       
+ <hr>  
+
+<!-- Présentation d'une ouverture d'une balise script -->
+
+ <h2>Balise Ouverture de script</h2>
+
+ <p id="demo3"></p>
+ 
+ <script>
+ document.getElementById("demo3").innerHTML = "Ouverture de la balise script";
+ </script>
+
+
+<hr>
+
+<!-- Présentation d'une ouverture d'une balise script en travaillant une fonction -->
+
+<h2>Le JavaScript ouverture du script via une fonction</h2>
+
+<script>
+    function myFunction() {
+      document.getElementById("demo4").innerHTML = "le script peut s'ouvrir n'importe où dans notre fichier";
+    }
+    // Je déclare ma fonction à l'intérieur de ma tabulation d'ouverture du script
+
+    </script>
+
+    <p id="demo4">La balise script</p>
+    
+    <button type="button" onclick="myFunction()">Click</button>
+    
+<hr>
+
+<!-- Exemple de script en externe -->
+
+<h2>JavaScript externe</h2>
+
+<script src="../JS/presentation.js"></script>
+
+<hr>
+
+<!-- Affichage avec l'utilisation du .innerHTML -->
+
+<h2>Affichage en .innerHTML</h2>
+
+<p id="demo5"></p>
+
+<script>
+document.getElementById("demo5").innerHTML = 10 + 20;
+</script>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
