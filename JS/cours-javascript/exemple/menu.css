@@ -1,0 +1,71 @@
+*{
+    margin:0;
+}
+
+body{
+    transition: 0.8s ease;
+    background: rgb(174, 172, 160);
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    width: 0;
+    height: 100vh;
+    background:linear-gradient(180deg, rgb(17, 17, 17), rgb(22, 216, 4));
+    box-shadow: 0 5px 5px 5px rgb(6, 206, 241);
+    transform:translate(-20vw);
+    position: fixed;
+    top: 0;
+    transition: 0.2s ease;
+  
+    
+}
+
+.navlink{
+    text-decoration: none;
+    color: rgb(218, 15, 76);
+    font-size: 5vh;
+    transition: 0.5s ease;
+   
+
+}
+
+.navlink:hover{
+    transform: scale(1.1);
+    text-shadow: 2px 4px 3px black;
+    color: rgb(245, 241, 8);
+
+
+}
+button{
+    margin: 20px;
+    border: solid 1px black;
+    box-shadow: 0px 0px 10px  blue;
+    animation: clignote 1s ease 1s infinite;
+    
+
+}
+
+@keyframes clignote {
+
+    0%{
+        box-shadow: 0px 0px 30px green;
+    }
+
+    50%{
+        box-shadow: 0px 0px 30px gold;
+
+    }
+
+    75%{
+        box-shadow: 0px 0px 30px palegreen;
+    }
+
+    100%{
+        box-shadow: 0px 0px 30px rgb(240, 9, 9);
+    }
+    
+}

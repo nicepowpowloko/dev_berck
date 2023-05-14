@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ici on va voir le Javascript</h1>
+</body>
+    <script type="application/javascript">
+        /*Un commentaire avec limite définie*/
+        //Un commentaire sur une seule ligne
+
+        let maPremiereVariable = "Je m'appelle Thomas/Kiwi"; //On défini une variable avec le mot-clé "let", par convention on écrira le nom de la variable, si elle est composée de plusieurs mots, en affublant une majuscule au début des mots a partir du second mot, ce qui signifie que le premier mot est TOUJOURS en minuscule
+
+        function maPremiereFonction() { //Le mot-clé function permet de déclarer des fonctions personalisées (Nous verrons plus tard les types de fonctions) et la syntaxe du nom de la fonction reste identique à celle de la variable
+            alert('Bonjour, ' + maPremiereVariable); //on utilise la fonction alert pour pouvoir créer une boîte de dialogue qui nous donne l'information sur notre variable. On utilise le symbole "+" pour symboliser un lien entre deux informations, on appelle ceci la concaténation. 
+        }
+
+        maPremiereFonction() //le fait d'appeller ma fonction sans utiliser le mot-clé me permet de la déclencher sur ma page.
+        
+        maPremiereVariable = 'J\'aime bien les SNEAKERS'; // on modifie les informations contenues dans la variale précédemment déclarée, ici on modifie les informations en utilisant le déclarant de chaine de caractère ''.
+        document.write(maPremiereVariable); // On écrit le résultat de la variable dans le body du document
+
+        let maSecondeVariable = `</br>${maPremiereVariable} comme Alex et Florian`; // On utilise ici le littéral de gabarit pour déclarer la seconde variable et inclure la première variable, on pourrait l'écrire maSecondeVariable = maPremiereVariable + "Comme Alex et....";
+
+        document.write(maSecondeVariable); 
+            
+    </script>
+</html>

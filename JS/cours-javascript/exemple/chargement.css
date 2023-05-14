@@ -1,0 +1,19 @@
+
+#myProgress {
+  width: 100%;
+  background-color: rgb(15, 244, 69);
+}
+
+#myBar {
+  width: 5%;
+  height: 30px;
+  background-color: #e90ba6;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(6, 6, 6);
+  border: 2px yellow solid;
+}
+
+
+
+
