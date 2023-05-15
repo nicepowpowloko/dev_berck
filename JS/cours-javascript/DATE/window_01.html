@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window_01</title>
+</head>
+<body>
+    <script>
+        /* Ouverture de la fenêtre */
+        /* Paramètres ( dans l'odre de mise en place ) :
+        -URL (Optionnel): Indique l'adresse URL de la page à ouvrir. Si aucune URL n'est spécifiée, une nouvelle fenêtre avec about.blank est ouverte,
+        -Nom de la fenêtre (Optionnel) : Spécifie l'attribut cible ou le nom de la fenêtre, les valeurs suivantes sont supportées:
+            _blank : URL est chargée dans une nouvelle fenêtre (valeur par défaut);
+            _parent : URL est chargée dans le cadre parent;
+            _self : URL remplace la page courante;
+            _top : URL remplace les jeux de cadres qui peuvent être chargés;
+            Nom : Le nom de la fenêtre;
+        -Spécifications détaillées de la fenêtre :
+            * height=pixels: Hauteur de la fenêtre (100px minimum);
+            * left=pixels: Position de la fenêtre par rapport à la gauche de l'écran;
+            * location=yes|no|1|0: Présence ou non d'une barre d'adresse;
+            * menubar=yes|no|1|0: Présence ou non d'une barre de menu;
+            * resizable=yes|no|1|0: Possibilité ou non de redimenssionner la fenêtre;
+            * scrollbars=yes|no|1|0: Présence ou non de barres de défilement;
+            * status=yes|no|1|0: Présence ou non d'une barre de status;
+            * titlebar=yes|no|1|0: Présence ou non d'une barre de titre;
+            * toolbar=yes|no|1|0: Présence ou non d'une barre d'outils;
+            * width=pixels: largeur de la fenêtre en pixel;*/
+            maFenetre = window.open("", "FENETRE_01", "width=200", "height=100", "location=yes", "titlebar=yes");
+
+/* ecriture d'un message dans la fenêtre */
+maFenetre.document.write("Fenêtre crée en <b>Javascript</br>");
+
+    /* focus sur  la fenêtre */
+    maFenetre.focus();
+
+    </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 let mois;
  mois =  parseInt(prompt("Numero du mois (entre 1 et 12) : "));
 switch(mois){

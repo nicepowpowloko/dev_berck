@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window_03</title>
+    <script>
+        function ouvrirFenetre(URL){
+            /* Ouverture de la fenêtre */
+            maFenetre = window.open(
+                URL,
+                "FENETRE",
+                "width=400, height=100, location=1, titlebar=yes, rezisable=yes)"
+            );
+            /* Temporisation de la fermeture de la fenêtre (10sec d'affichage)*/
+            timeout = setTimeout("fermerFenetre()", 10000);
+        }
+
+        /* Fonction fermerFenetre */
+        function fermerFenetre(){
+            maFenetre.close();
+        }
+    </script>
+</head>
+<body>
+
+    <form action="">
+        <input type="button"
+        value="Ouverture d'une fenêtre nbastore.eu (pendant 10sec)"
+        onclick="ouvrirFenetre('http://www.nbastore.eu')"
+        />
+    </form>
+
+
+
+
+    
+</body>
+</html>

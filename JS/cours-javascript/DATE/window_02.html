@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window_02</title>
+    <script>
+        function ouvrirFenetre(URL) {
+            maFenetre = window.open(
+                URL,
+                "FENETRE_02",
+                "width=400; height=200; location=1; titlebar=yes; resizable=yes"
+            );
+        }
+
+        function fermerFenetre(){
+            maFenetre.close();
+        }
+    </script>
+</head>
+<body>
+ 
+
+<form>
+    ouverture d'une fenêtre avec passage de l'URL en paramétre</br>
+
+<input
+type="button"
+value="ouverture d'une fenêtre nbastore.eu"
+onclick="ouvrirFenetre('http://www.nbastore.eu')"
+
+/>
+
+<br />
+<br />
+<br />
+fermeture </br>
+
+<input 
+type="button"
+value="pu de sous"
+onclick="fermerFenetre()"
+/>
+
+</form>
+
+
+</body>
+</html>

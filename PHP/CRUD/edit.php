@@ -4,7 +4,7 @@ session_start();
 
 if($_POST){
     if(isset($_POST['id']) && !empty($_POST['id'])
-    &&isset($_POST['produit']) && !empty($_POST['produit'])
+    && isset($_POST['produit']) && !empty($_POST['produit'])
     && isset($_POST['prix']) && !empty($_POST['prix'])
     && isset($_POST['nombre']) && !empty($_POST['nombre'])){
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date_01</title>
+</head>
+<body>
+    
+
+
+<script>
+
+alert("alert oh gogoll");
+
+    /* methode getDate -> retourne le n° du jour dans le mois de la date systeme */
+        var dateDuJour = new Date();
+        var jourMois = dateDuJour.getDate();
+        document.write("N° du jour de la date système : " + jourMois);
+
+/* methode getDay -> retourne le n° du jour dans la semaine (n° de 0 a 6) de la date du syteme */
+        var dateDuJour = new Date();
+        var jourSemaine = dateDuJour.getDay();
+        document.write("</br>N° du jour dans la semaine (n° de 0 à 6) de la date système : " + jourSemaine);
+
+/* methode getMonth -> retourne le n° du mois (n° de 0 a 11) de la date systéme */
+        var dateDuJour = new Date();
+        var mois = dateDuJour.getMonth();
+        document.write("</br>N° du mois de la date système : " + (mois + 1));
+
+/* methode getFullYear -> retourne le n° de l'année (sur 4 positions) de la date systéme */
+        var dateDuJour = new Date();
+        var annee = dateDuJour.getFullYear();
+        document.write("</br>N° de l'année de la date système : " + annee);
+
+/* methode getHours -> retourne le n° de l'heure (n° de 0 a 23) de la date systéme*/
+        var dateDuJour = new Date();
+        var heure = dateDuJour.getHours();        
+         document.write("</br>N° de l'heure de la date systeme : " + heure);
+
+/* methode getMinutes -> retourne le n° de la minute (n° de 0 a 59) de la date systeme */
+        var dateDuJour = new Date();
+        var minute = dateDuJour.getMinutes();        
+         document.write("</br>N° de la minute de la date systeme : " + minute);
+
+/* methode getSeconds -> retourne le n° de la seconde (n° de 0 a 59) de la date systeme */
+        var dateDuJour = new Date();
+        var seconde = dateDuJour.getSeconds();        
+         document.write("</br>N° de la seconde de la date systeme : " + seconde);
+
+/* methode setDate -> definit un n° de jour dasn le mois par rapport a la date syteme (le 15 du mois dans notre cas) */
+        var dateDuJour = new Date();
+        dateDuJour.setDate(15);        
+         document.write("</br>le 15 du mois correspond a la date systeme : " + dateDuJour);
+
+         /* methode setMonth -> definit la date un mois en arriére par rapport a la date syteme */
+        var dateDuJour = new Date();
+        dateDuJour.setMonth(dateDuJour.getMonth() - 1);    
+         document.write("</br>Un an en arriere par rapport a  la date systeme : " + dateDuJour);
+
+/* methode toLocaleDateString -> convertit la date sytéme en chaine date en version locale=FR*/
+        var dateDuJour = new Date();
+        var dateLocale = dateDuJour.toDateString();    
+         document.write("</br>Date syteme (version locale=FR) : " + dateLocale); 
+
+
+
+ /* methode toLocaleTimetring -> convertit la date sytéme en chaine d'heure heures/minutes/secondes en version locale=FR*/
+        var dateDuJour = new Date();
+        var heureLocale = dateDuJour.toLocaleTimeString();   
+         document.write("</br>Heures/Minutes/Secondes (version locale=FR) : " + heureLocale); 
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
