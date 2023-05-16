@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu_filtre</title>
+</head>
+<body>
+    
+<style>
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.filtre {
+  margin-bottom: 20px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.item {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 0px 3px 3px black;
+  border-radius: 5%;
+}
+
+
+h1{
+display: flex;
+justify-content: center;
+}
+
+img{
+    height: 150px;
+    width: 200px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+}
+
+
+option{
+    background-color: aqua;
+    font-size: 1em;
+    
+}
+
+</style>
+
+
+<h1>EXEMPLE DE FILTRE POUR SNEAKERS</h1>
+
+
+<div class="menu">
+    <div class="filtre">
+      <label for="filtre_taille">Taille :</label>
+      <select id="filtre_taille">
+        <option value="all">Tous</option>  <!-- L'élément <option> est utilisé dans les balises <select> pour créer une liste déroulante avec différentes options all" tous " -->
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+      </select>
+      <label for="filtre_marque">Marque :</label>
+      <select id="filtre_marque">
+        <option value="all">Tous</option> <!-- L'élément <option> est utilisé dans les balises <select> pour créer une liste déroulante avec différentes options all" tous " -->
+        <option value="nike">NIKE</option>
+        <option value="kd">KD</option>
+        <option value="jordan">JORDAN</option>
+      </select>
+      <label for="filtre_prix">Prix :</label>
+      <select id="filtre_prix">
+        <option value="all">Tous</option> <!-- L'élément <option> est utilisé dans les balises <select> pour créer une liste déroulante avec différentes options all" tous " -->
+        <option value="100">100-200 €</option>
+        <option value="200">200-300 €</option>
+        <option value="300">300-400 €</option>
+      </select>
+    </div>
+
+
+
+
+
+    
+    <div class="items">
+      <div class="item" data-taille="42" data-marque="nike" data-prix="100"><h2>Nike Blazer</h2>
+        <h4>Prix : 200 €</h4>
+        <img src="../IMAGE/nike_blazer.webp" alt="">
+      </div>
+      <div class="item" data-taille="44" data-marque="nike" data-prix="200"><h2>Nike Dunk</h2>
+        <h4>Prix : 210 €</h4>
+        <img src="../IMAGE/nike_dunk.webp" alt="">
+      </div>
+      <div class="item" data-taille="43" data-marque="nike" data-prix="200"><h2>Nike Air Max-95</h2>
+        <h4>Prix : 250 €</h4>
+        <img src="../IMAGE/air_max_95_pink.webp" alt="">
+      </div>
+      <div class="item" data-taille="43" data-marque="nike" data-prix="300"><h2>Nike Travis X</h2>
+        <h4>Prix : 390 €</h4>
+        <img src="../IMAGE/travis_scott.jpg" alt="">
+      </div>
+      <div class="item" data-taille="43" data-marque="kd" data-prix="300"><h2>Kd Trey-5</h2>
+        <h4>Prix : 300 €</h4>
+        <img src="../IMAGE/kdtry5.jpg" alt="">
+    </div>
+    <div class="item" data-taille="42" data-marque="kd" data-prix="200"><h2>Kd-15 Aimbot</h2>
+        <h4>Prix : 260 €</h4>
+        <img src="../IMAGE/kd_15 Aimbot.jpg" alt="">
+    </div>
+    <div class="item" data-taille="44" data-marque="kd" data-prix="100"><h2>Kd-15 Brooklyn</h2>
+        <h4>Prix : 180 €</h4>
+        <img src="../IMAGE/kd_15_brooklyn.jpg" alt="">
+    </div>
+      <div class="item" data-taille="44" data-marque="jordan" data-prix="200"><h2>Jordan-5</h2>
+        <h4>Prix : 290 €</h4>
+        <img src="../IMAGE/jordan5.jpg" alt="">
+    </div>
+    <div class="item" data-taille="43" data-marque="jordan" data-prix="300"><h2>Jordan-5 reto-aqua</h2>
+        <h4>Prix : 370 €</h4>
+        <img src="../IMAGE/air-jordan-5-retro-aqua.webp" alt="">
+    </div>
+    <div class="item" data-taille="42" data-marque="jordan" data-prix="300"><h2>Jordan-1 mid</h2>
+        <h4>Prix : 325 €</h4>
+        <img src="../IMAGE/Jordan 1-mid.jpg" alt="">
+    </div>
+   
+      <!-- Ajoutez d'autres éléments ici -->
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+<script>
+
+// Récupérer les éléments du DOM
+// j'effectue tous mes récupération
+const filtre_taille = document.getElementById('filtre_taille');
+const filtre_marque = document.getElementById('filtre_marque');
+const filtre_prix = document.getElementById('filtre_prix');
+const items = document.querySelectorAll('.item');
+
+// Ajouter des  d'événements pour les filtres
+filtre_taille.addEventListener('change', filterItems);
+filtre_marque.addEventListener('change', filterItems);
+filtre_prix.addEventListener('change', filterItems);
+
+// Fonction de filtrage des éléments
+function filterItems() {
+  const selectedtaille = filtre_taille.value;
+  const selectedmarque = filtre_marque.value;
+  const selectedprix = filtre_prix.value;
+
+  // Parcourir les éléments et les afficher ou les masquer en fonction des filtres
+  items.forEach((item) => {
+    const itemtaille = item.getAttribute('data-taille');
+    const itemmarque = item.getAttribute('data-marque');
+    const itemprix = item.getAttribute('data-prix');
+
+    if (
+      (selectedtaille === 'all' || selectedtaille === itemtaille) &&
+      (selectedmarque === 'all' || selectedmarque === itemmarque) &&
+      (selectedprix === 'all' || selectedprix === itemprix)
+    ) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// Afficher tous les éléments au chargement de la page
+filterItems();
+
+</script>
+
+</body>
+</html>

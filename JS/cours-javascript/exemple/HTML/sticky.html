@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu-stivky</title>
+</head>
+<body>
+
+    <style>
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  display: flex;
+  justify-content:space-around;
+  
+  
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.menu ul li .deroulmenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f8f8f8;
+  padding: 5px;
+}
+
+.deroulmenu li{
+    padding: 10px;
+}
+
+.menu ul li:hover .deroulmenu {
+  display: block;
+}
+
+
+body{
+    height: 1000vh;
+    background-color: chartreuse;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+    </style>
+
+<!-- fermeture balise style -->
+
+<nav class="menu">
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li class="deroulant">
+        <a href="#">Services</a>
+        <ul class="deroulmenu">
+          <li><a href="#">index</a></li>
+          <li><a href="#">acc</a></li>
+          <li><a href="#">produit</a></li>
+        </ul>
+      </li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+
+
+
+    <img src="../IMAGE/Mercedes-AMG-F1-W11-EQ-AMD-renders.webp" alt="" srcset="">
+
+    <img src="../IMAGE/Mercedes-AMG-F1-W11-EQ-AMD-renders.webp" alt="" srcset="">
+
+  
+
+
+
+
+
+<!-- ouverture balise script -->
+
+<script>
+
+
+
+</script>
+
+
+</body>
+</html>

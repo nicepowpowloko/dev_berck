@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrandir_image</title>
+</head>
+<body>
+    
+
+<style>
+
+#monImage {
+  width: 200px;
+  transition: width 0.3s ease-in-out;
+}
+
+#monImage:hover {
+  width: 300px;
+}
+</style>
+
+
+
+<img src="../IMAGE/fornite.gif" alt="Image" id="monImage">
+
+
+
+
+
+<script>
+
+// Sélectionnez l'élément image
+var image = document.getElementById('monImage');
+
+// Ajoutez un gestionnaire d'événement pour l'événement mouseover "passage de la souris"
+image.addEventListener('mouseover', function() {
+  this.style.width = '800px';
+});
+
+// Ajoutez un gestionnaire d'événement pour l'événement mouseout "déplacement du curseur aux dehors"
+image.addEventListener('mouseout', function() {
+  this.style.width = '100px';
+});
+
+</script>
+
+</body>
+</html>

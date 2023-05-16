@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation_js</title>
+</head>
+<body>
+    
+<style>
+
+#animation {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+#animation img {
+  width: 500px;
+  height: 500px;
+}
+
+
+body{
+    height: 500vh;
+}
+
+
+</style>
+
+
+
+<div id="animation">
+    <img src="../IMAGE/avion.jpg" alt="Mon image">
+  </div>
+  
+
+
+
+
+
+
+<script>
+
+window.addEventListener('scroll', function() {
+  var animationElement = document.getElementById('animation');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > 100) {
+    animationElement.style.transform = 'translateY(100px)';
+    animationElement.style.opacity = 1;
+  } else {
+    animationElement.style.transform = 'translateY()';
+    animationElement.style.opacity = 0;
+  }
+});
+
+//avec l'ID animation qui contient une balise <img> avec le chemin vers votre image. Lorsque l'utilisateur fait défiler la page de plus de 100 pixels vers le bas, l'élément se déplace vers le bas de 100 pixels avec une transition animée et son opacité passe à 1, ce qui le rend visible. Lorsque l'utilisateur fait défiler la page de nouveau vers le haut, l'élément revient à sa position d'origine en haut de la page avec une transition animée et son opacité passe à 0, ce qui le rend invisible.
+
+
+</script>
+
+</body>
+</html>
