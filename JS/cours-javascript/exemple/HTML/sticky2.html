@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky_2</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <style>
+        /* Styles pour le menu */
+
+
+
+
+        .menu {
+          background-color: #f1f1f1;
+          padding: 10px;
+          position: sticky;
+          top: 0;
+          z-index: 999;
+        }
+      
+        .menu ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+      
+        .menu li {
+          position: relative;
+          flex: 1;
+          text-align: center;
+        }
+      
+        .menu li a {
+          display: block;
+          color: #333;
+          padding: 10px;
+          text-decoration: none;
+        }
+      
+        /* Styles pour les sous-menus */
+        .menu2 {
+          background-color: #f1f1f1;
+          padding: 10px;
+          position: sticky;
+          top: 48px; /* Hauteur du menu principal */
+          display: none;
+        }
+      
+        .menu2 ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: block;
+          flex-wrap: wrap;
+        }
+      
+        .menu2 li {
+          position: relative;
+          flex: 1;
+          text-align: center;
+        }
+      
+        .menu2 li a {
+          display: block;
+          color: #333;
+          padding: 10px;
+          text-decoration: none;
+        }
+
+       .image{
+        position: relative;
+        z-index: -1;
+       }
+
+
+body{
+    height: 600vh;
+}
+
+      </style>
+      
+
+
+
+
+      <div class="menu">
+        <ul>
+            <li>
+                <a href="#">Café</a>
+                <div class="menu2">
+                  <ul>
+                    <li><a href="#">Les classiques | 80+</a></li>
+                    <li><a href="#">Les cafés de saison | 84+</a></li>
+                    <li><a href="#">Les éditions limités | 87+</a></li>
+                    <li><a href="#">Lots de compétition | 90+</a></li>
+                    </ul>
+                </div>
+              </li>
+          <li>
+            <a href="#">Abonnement</a>
+            <div class="menu2">
+              <ul>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+                <li><a href="#">Service 4</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Equipement</a>
+            <div class="menu2">
+              <ul>
+                <li><a href="#">Produit 1</a></li>
+                <li><a href="#">Produit 2</a></li>
+                <li><a href="#">Produit 3</a></li>
+                <li><a href="#">Produit 4</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Mon compte</a></li>
+        </ul>
+      </div>
+
+
+<div class="image">
+    <img src="../IMAGE/air_max_95_pink.webp" alt="">
+</div>
+
+
+
+
+
+
+
+
+      
+      <script>
+        var menu2 = document.querySelectorAll('.menu2');
+      
+        menu2.forEach(function(menu2) {
+          var parent = menu2.parentNode;
+      
+          parent.addEventListener('mouseover', function() {
+            menu2.style.display = 'block';
+          });
+      
+          parent.addEventListener('mouseout', function() {
+            menu2.style.display = 'none';
+          });
+        });
+      </script>
+     
+
+
+
+</body>
+</html>

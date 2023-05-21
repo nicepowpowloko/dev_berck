@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>affich_mdp</title>
+</head>
+<body>
+    
+
+    <input type="password" id="MotDePasse">
+    <input type="checkbox" id="affichPasse"> Afficher le mot de passe
+    
+    <script>
+      var MotDePasse = document.getElementById("MotDePasse");
+      var affichPasse = document.getElementById("affichPasse");
+    
+      affichPasse.addEventListener("change", function() {
+        if (affichPasse.checked) {
+            MotDePasse.type = "text";
+        } else {
+            MotDePasse.type = "password";
+        }
+      });
+
+
+//Lorsque qu je coche la case, la fonction associée à l'événement change le type de l'input du mot de passe en "text", ce qui affiche le mot de passe en texte brut. Lorsque,je décoche la case le type de l'input est rétabli en "password", ce qui masque le mot de passe.
+
+
+
+
+    </script>
+
+</body>
+</html>
