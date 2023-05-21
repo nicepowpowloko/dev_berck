@@ -18,7 +18,7 @@ if($_POST){
         $nombre = strip_tags($_POST['nombre']);
        
 
-        $sql = 'UPDATE `liste` SET `produit`=:produit, `prix`=:prix, `nombre`=:nombre, WHERE `id`=:id;';
+        $sql = 'UPDATE `liste` SET `produit`=:produit, `prix`=:prix, `nombre`=:nombre WHERE `id`=:id;';
 
         $query = $db->prepare($sql);
         $query->bindValue(':id', $id, PDO::PARAM_INT);
