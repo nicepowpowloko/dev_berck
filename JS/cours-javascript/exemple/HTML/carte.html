@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carte de France interactive avec agrandissement des régions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <style>
+    #map { height: 500px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.zoomify/dist/leaflet.zoomify.min.js"></script>
+  <script>
+    // Coordonnées géographiques du centre de la France
+    var center = [46.603354, 1.888334];
+
+    // Initialisation de la carte
+    var map = L.map('map').setView(center, 6);
+
+    // Ajout du fond de carte OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Tableau des régions de France avec les liens vers les images zoomify
+    var regions = [
+      { name: "Île-de-France", imageUrl: "path/to/ile_de_france.tif" },
+      { name: "Auvergne-Rhône-Alpes", imageUrl: "path/to/auvergne_rhone_alpes.tif" },
+      { name: "Provence-Alpes-Côte d'Azur", imageUrl: "path/to/provence_alpes_cote_d_azur.tif" },
+      // Ajoutez ici les autres régions avec les liens vers les images
+    ];
+
+    // Ajout des marqueurs pour chaque région avec agrandissement au survol
+    regions.forEach(function(region) {
+      var marker = L.marker(region.coordinates).addTo(map);
+      marker.bindPopup("<b>" + region.name + "</b>").openPopup();
+
+      // Événement de survol pour agrandir la région
+      marker.on('mouseover', function() {
+        var zoomifyLayer = L.zoomify(region.imageUrl, {
+          width: 256,  // Largeur de l'image agrandie
+          height: 256  // Hauteur de l'image agrandie
+        });
+        map.addLayer(zoomifyLayer);
+      });
+
+      // Événement de sortie pour supprimer l'agrandissement de la région
+      marker.on('mouseout', function() {
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.Zoomify) {
+            map.removeLayer(layer);
