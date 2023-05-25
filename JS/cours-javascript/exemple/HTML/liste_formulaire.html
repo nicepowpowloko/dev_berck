@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste_formulaire</title>
+</head>
+<body>
+    <form>
+        <label for="pays">Pays :</label>
+        <select id="pays" name="pays">
+            <option value="france">France</option>
+            <option value="usa">États-Unis</option>
+            <option value="uk">Royaume-Uni</option>
+            <option value="allemagne">Allemagne</option>
+            <option value="espagne">Espagne</option>
+        </select>
+        <br>
+        <input type="submit" value="Soumettre">
+    </form>
+
+    <script>
+        // Accéder à l'élément select
+        var selectElement = document.getElementById("pays");
+
+        // Écouter l'événement de changement de sélection
+        selectElement.addEventListener("change", function() {
+            // Récupérer la valeur sélectionnée
+            var selectedValue = selectElement.value;
+
+            // Afficher la valeur sélectionnée dans la console
+            console.log("Pays sélectionné :", selectedValue);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
