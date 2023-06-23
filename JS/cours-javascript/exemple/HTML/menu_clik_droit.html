@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple de menu contextuel personnalisé </title>
+  <style>
+    .context-menu {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="maDiv">Cliquez avec le bouton droit de la souris ici</div>
+  
+  <div id="contextMenu" class="context-menu">
+    <ul>
+      <li>matin</li>
+      <li>midi</li>
+      <li>soir</li>
+    </ul>
+  </div>
+  
+  <script>
+    window.addEventListener('load', function() {
+      var divElement = document.getElementById('maDiv');
+      var contextMenu = document.getElementById('contextMenu');
+      
+      divElement.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        
+        // Position the context menu
+        contextMenu.style.left = event.pageX + 'px';
+        contextMenu.style.top = event.pageY + 'px';
+        
+        // Show the context menu
+        contextMenu.style.display = 'block';
+      });
+      
+      document.addEventListener('click', function(event) {
+        if (!contextMenu.contains(event.target)) {
+          contextMenu.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

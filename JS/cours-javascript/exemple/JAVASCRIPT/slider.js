@@ -1,3 +1,4 @@
+
 let mainPost = document.querySelectorAll('.mainpost');
 let posts = document.querySelectorAll(".post");
 let i = 0;

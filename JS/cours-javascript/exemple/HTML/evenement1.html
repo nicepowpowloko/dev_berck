@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evenement_1</title>
+</head>
+<body>
+    
+    <style>
+      
+
+
+        .wahou {
+      background-color: yellow;
+    }
+
+
+      </style>
+
+
+<input type="text" id="myInput">
+<p id="message"></p>
+
+
+<div id="myDiv">Double-cliquez ici</div>
+
+
+<div id="myDiv2">Cliquez avec le bouton droit de la souris ici</div>
+
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">donne moi l'heure ?</button>
+
+    <p id="demo"></p>
+
+
+<script>
+    window.addEventListener('load', function() {
+      var inputElement = document.getElementById('myInput');
+      var messageElement = document.getElementById('message');
+      
+
+    //J'utilise document.getElementById pour récupérer les éléments du champ de texte et du message. Ensuite, j'ajoute un écouteur d'événements keyup à l'élément du champ de texte.
+
+
+      inputElement.addEventListener('keyup', function(event) {
+
+        //Lorsque l'événement keyup se produit, la fonction de rappel est exécutée. L'objet event contient des informations sur l'événement, y compris la propriété key qui représente la touche du clavier qui a été appuyée.
+
+
+    //J'utilise event.key pour obtenir la valeur de la touche, puis je mets à jour le contenu du paragraphe avec l'ID message en utilisant textContent. Le texte affichera "Vous avez appuyé sur la touche : [valeur de la touche]".
+
+
+        var key = event.key;
+        messageElement.textContent = 'Vous avez appuyé sur la touche : ' + key;
+      });
+    });
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        window.addEventListener('load', function() {
+        var divElement = document.getElementById('myDiv');
+      
+        divElement.addEventListener('dblclick', function() {
+            divElement.classList.add('wahou');
+        });
+        });
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//J'utilise document.getElementById pour récupérer l'élément de la balise <div>. Ensuite, j'ajoute un écouteur d'événements contextmenu l'élément.
+
+window.addEventListener('load', function() {
+      var divElement = document.getElementById('myDiv2');
+      
+      divElement.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        alert('Clic droit détecté!');
+      });
+    });
+
+
+  </script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+

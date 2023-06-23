@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> animation_variable</title>
+</head>
+<body>
+        <style>
+            #box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    
+        <script>
+            // Je déclare les variables
+            var box = document.getElementById("box");
+            var positionX = 0;
+            var positionY = 0;
+    
+            // j'utilise une fonction pour animaer le boite
+            function animateBox() {
+                // je met à jour mes futurs position j'augmente par la suite de 1 et de 2px
+                positionX += 1;
+                positionY += 2;
+    
+                // Je lui dit d'augmenter a chacque fois de px
+                box.style.left = positionX + "px";
+                box.style.top = positionY + "px";
+    
+                // J'appelle le nom de mon animation via le 'requetAnimationsFrame'
+                requestAnimationFrame(animateBox);
+            }
+    
+            // je lance ici mon animation via la déclaration de mes variable dans ma fonction
+            animateBox();
+        </script>
+    
+    
+
+
+</body>
+</html>
