@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+
+
+
+#test{
+    width: 30vw;
+    height: 40vh;
+    margin-top: 50px;
+    margin-left: 40%;
+   
+   
+}

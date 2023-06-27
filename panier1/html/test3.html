@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3</title>
+</head>
+<body>
+    
+
+
+<script>
+
+const fs = require('fs');
+    fs.readdir('path/to/folder', (err, files) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+    
+      console.log(files); // This will log an array of filenames in the folder
+    });
+    const imageFiles = files.filter(file => file.match(/.(jpg|jpeg|png|gif)$/i));
+    const galleryHtml = imageFiles.map(file => <img src="path/to/folder/${file}" alt="">).join('');
+ 
+
+
+</script>
+
+
+</body>
+</html>

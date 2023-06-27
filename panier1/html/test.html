@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/test.css">
+    <title>gallery horreur</title>
+</head>
+<body>
+    <div id='content'>
+        <img id="test" />
+        
+    </div>
+
+    <div id='content1'>
+        <img id="test1"/>
+    </div>
+
+    <div id='content2'>
+        <img id="test2"/>
+    </div>
+
+    <div id='content3'>
+        <img id="test3"/>
+    </div>
+
+    <div id='content4'>
+        <img id="test4"/>
+    </div>
+
+
+<script>
+     var kiwi = [
+        "../img/american story.webp",
+        "../img/even peters.jpg",
+        "../img/23horeur.jpg"
+    ];
+    var poy = document.getElementById("test");
+    var currentIndex = 0;
+    var testTimer;
+
+    (function nextImg(){        
+        testTimer = Date.now();
+        poy.src=kiwi[currentIndex];
+        poy.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi.length;
+            var remainingTime = 1800- (Date.now() - testTimer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+    var kiwi1 = [
+        "../img/halloween.jpeg",
+        "../img/film-horreur-halloween.jpg",
+        "../img/horeur.jpg"
+    ];
+    var img = document.getElementById("test1");
+    var currentIndex = 0;
+    var test1Timer;
+
+    (function nextImg(){        
+        test1Timer = Date.now();
+        img.src=kiwi1[currentIndex];
+        img.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi1.length;
+            var remainingTime = 2500- (Date.now() - test1Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+    var kiwi2 = [
+        "../img/scream.jpg",
+        "../img/saw.webp",
+        "../img/11637390.webp"
+    ];
+    var loko = document.getElementById("test2");
+    var currentIndex = 0;
+    var test2Timer;
+
+    (function nextImg(){        
+        test2Timer = Date.now();
+        loko.src=kiwi2[currentIndex];
+        loko.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi2.length;
+            var remainingTime = 2100- (Date.now() - test2Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+
+    var kiwi3 = [
+        "../img/banque horreur.jpg",
+        "../img/cinema horreur.jpg",
+        "../img/grinch.jpg"
+    ];
+    var nice = document.getElementById("test3");
+    var currentIndex = 0;
+    var test3Timer;
+
+    (function nextImg(){        
+        test3Timer = Date.now();
+        nice.src=kiwi3[currentIndex];
+        nice.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi3.length;
+            var remainingTime = 1000- (Date.now() - test3Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+    var kiwi4 = [
+        "../img/banque horreur.jpg",
+        "../img/cinema horreur.jpg",
+        "../img/grinch.jpg"
+    ];
+    var tom = document.getElementById("test4");
+    var currentIndex = 0;
+    var test4Timer;
+
+    (function nextImg(){        
+        test4Timer = Date.now();
+        tom.src=kiwi4[currentIndex];
+        tom.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi4.length;
+            var remainingTime = 1600- (Date.now() - test4Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+</script>
+
+</body>
+</html>

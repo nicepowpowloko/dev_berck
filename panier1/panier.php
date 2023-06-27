@@ -25,6 +25,8 @@ require '/laragon/www/panier/include/header.php';
     }
 </style>
 
+
+
 <table>
     <tr>
         <th>Image</th>
@@ -56,6 +58,8 @@ foreach ($prods as $prodss):
 <h1>Nombre de produits : <?= $panier->count() ?></h1>
 <h1>Total : <?= number_format($panier->total(),2,',',' ') ?>€</h1>
 <a href="/panier/index.php">Retourner Au catalogue</a>
+
+
 
 <?php
 include '/laragon/www/panier/include/footer.php';

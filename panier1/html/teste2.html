@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+</head>
+
+<body>
+    
+<script>
+
+const fs = require('fs');
+
+fs.readdir('../photos', (err, files) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log(files);
+});
+
+  
+
+files.forEach(file => {
+  const imgElement = document.createElement('img');
+  imgElement.src = `../photos/${file}`;
+
+  document.body.appendChild(imgElement);
+});
+
+   
+
+const parentElement = document.getElementById('image-container');
+
+files.forEach(file => {
+  const imgElement = document.createElement('img');
+  imgElement.src = `../photos/${file}`;
+
+  parentElement.appendChild(imgElement);
+});
+
+
+</script>
+
+
+
+</body>
+</html>
